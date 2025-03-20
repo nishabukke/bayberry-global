@@ -31,7 +31,7 @@ li{
 }
 
 .section_lg{
-    padding: 80px 40px;
+    padding: 50px 30px;
 }
 
 .small-heading{
@@ -70,6 +70,23 @@ p{
     color: #fff;
 }
 
+.yellow-btn{
+    background-color: #fdd5a5;
+    font-weight: 600;
+    padding: 10px 25px;
+    color: #132b2c;
+    border-radius: 8px;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    transition: all .2s ease;
+}
+
+.yellow-btn:hover{
+    background-color: #27826f;
+    color: #fff;
+}
+
 
 /* header css start */
 
@@ -93,6 +110,11 @@ p{
 
 .right-upper-header a span{
     margin-right: 6px;
+}
+
+.right-upper-header a:hover{
+    color: #fff;
+    text-decoration: underline;
 }
 
 .lower-header{
@@ -165,7 +187,7 @@ p{
     transition: 0.4s;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
-    width: 200px;
+    width: 240px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -356,7 +378,7 @@ p{
 
 .key-points li span{
     margin-right: 5px;
-    color: #C2C375;
+    color: #fdd5a5;
 }
 
 .right-about{
@@ -418,40 +440,34 @@ p{
 .services-inner{
     margin-top: 60px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 20px;
-    row-gap: 50px;
 }
 
 .services-item{
-    padding: 45px 10px 40px 10px;
+    padding: 20px;
     border-radius: 10px;
     color: #132b2c;
     box-shadow: 0px 10px 40px -5px rgba(0, 0, 0, 0.15);
     background-color: #fff;
-    text-align: center;
-    position: relative;
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: baseline;
     gap: 10px;
 }
 
-.service-img{
-    background-color: #27826f;
-    padding: 10px;
-    width: 60px;
-    height: 60px;
-    border-radius: 8px;
-    position: absolute;
-    top: -12%;
-    left: 50%;
-    transform: translate(-50%, -12%);
+.service-item-heading{
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
-.services-item img{
+.service-item-heading img{
     width: 100%;
+    height: 150px;
+    border-radius: 8px;
 }
+
 
 /* services section css end */
 
@@ -500,7 +516,7 @@ p{
 }
 
 .right-banner a{
-    background-color: #C2C375;
+    background-color: #fdd5a5;
     font-weight: 600;
     padding: 10px 25px;
     color: #132b2c;
