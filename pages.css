@@ -103,7 +103,11 @@ p{
     padding: 0px 40px;
 }
 
-.left-upper-header a, .right-upper-header a{
+.left-upper-header a{
+    font-size: 18px;
+}
+
+.right-upper-header a{
     margin: 0px 7px;
     font-size: 14px;
 }
@@ -112,7 +116,7 @@ p{
     margin-right: 6px;
 }
 
-.right-upper-header a:hover{
+.right-upper-header a:hover, .left-upper-header a:hover{
     color: #fff;
     text-decoration: underline;
 }
@@ -628,6 +632,99 @@ p{
 
 /* certificate section css end */
 
+/* product category section css start */
+
+.product-category-section{
+    display: grid;
+    grid-template-columns: 3.5fr 8.5fr;
+    gap: 50px;
+}
+
+.TabButton {
+    width: 100%;
+  color: #132b2c;
+  text-transform: uppercase;
+  background-color: #fdd5a5;
+  border-radius: 10px;
+  margin: 7px 0px;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.TabButtonSelected {
+  color: #fff;
+  background-color: #27826f;
+}
+
+.d-chart-n {
+display: none;
+}
+
+.d-chart-show {
+display: block;
+}
+
+.tab-section{
+    padding: 0px 30px;
+}
+
+.tab-section p{
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+/* cicely life */
+
+.cicely-life-logo-img{
+    display: flex;
+    margin: 0px auto 30px;
+}
+
+.cicely-life-inner{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}
+
+.cicely-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #27826f;
+    border-radius: 8px;
+}
+
+.cicely-item img{
+    width: 150px;
+}
+
+.bayberry-vet-section{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+
+.bayberry-vet-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border: 1px solid #27826f;
+    border-radius: 8px;
+}
+
+.bayberry-vet-item img{
+    width: 150px;
+    height: 250px;
+}
+
+/* product category section css end */
+
 
 /* banner section css start */
 
@@ -869,8 +966,8 @@ p{
 
 .contact-inner{
     display: grid;
-    grid-template-columns: 7.5fr 4.5fr;
-    gap: 60px;
+    grid-template-columns: repeat(1,1fr);
+    gap: 40px;
 }
 
 .left-contact-content{
@@ -882,18 +979,18 @@ p{
 .location-div{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 25px;
+    gap: 35px;
 }
 
 .location-item{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     color: #27826f;
     border-right: 1px dotted #27826f;
 }
 
-.location-item:last-child{
+.location-item:last-child, .location-item:nth-child(3), .location-item:nth-child(6){
     border-right: none;
 }
 
@@ -918,16 +1015,17 @@ p{
 .right-contact-content form .form-group{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 20px;
+    gap: 30px;
 }
 
 .right-contact-content form .input-group{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
+    font-size: 14px;
 }
 
-.right-contact-content form .form-group .input-group input, .right-contact-content form textarea{
+.right-contact-content form .form-group .input-group input, .right-contact-content form textarea, .right-contact-content form .input-group select{
     padding: 10px;
     border-radius: 5px !important;
     border: none;
@@ -941,5 +1039,59 @@ p{
     width: 100%;
 }
 
-
 /* contact page css end */
+
+
+/* domestic operation page css start */
+
+
+.business-partner-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.left-business-partner{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.support-inner{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    align-items: center;
+}
+
+.left-support img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.right-support ul li{
+    padding: 5px 0px;
+}
+
+.right-support ul li span{
+    margin-right: 10px;
+}
+
+/* domestic operation page css end */
+
+/* career section css start */
+
+.career-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.career-section a:hover{
+    text-decoration: underline;
+    color: inherit;
+}
+
+/* career section css end */
