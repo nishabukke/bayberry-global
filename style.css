@@ -105,6 +105,7 @@ p{
 
 .left-upper-header a{
     font-size: 18px;
+    margin: 0px 5px;
 }
 
 .right-upper-header a{
@@ -262,6 +263,7 @@ p{
 
 .home-banner .carousel-item img{
     border-radius: 20px;
+    /* height: 550px; */
 }
 
 .carousel-inner{
@@ -271,7 +273,7 @@ p{
 .carousel-content{
     position: absolute;
     left: 5%;
-    top: 30%;
+    top: 72%;
     width: 45%;
     display: flex;
     flex-direction: column;
@@ -400,6 +402,57 @@ p{
     margin-bottom: 5px;
 }
 
+
+.vm-inner{
+    background-color: #27826f;
+    padding: 40px;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #f6f6f6 30%, #ffffff 100%);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 4.5fr 7.5fr;
+    gap: 40px;
+}
+
+.right-vision-mission{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.left-vision-mission{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left-vision-mission hr{
+    height: 10px;
+    width: 30%;
+    color: #f8b86a;
+    background-color: #f8b86a;
+}
+
+.vision-div{
+    background-color: #fff;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.vision-div h4{
+    background-color: #27826f;
+    text-align: center;
+    padding: 15px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.vision-div p{
+    padding: 20px 15px;
+    font-size: 15px;
+}
+
+
 /* about section css end */
 
 /* certificate section css start */
@@ -410,7 +463,7 @@ p{
 
 .swiper-slide img{
     width: 100%;
-    height: 100px;
+    height: 135px;
 }
 
 .certificate-section .swiper-pagination-bullet{
@@ -804,6 +857,59 @@ button{
 
 /* testimonial section css end */
 
+/* testimonial section css start */
+
+.testimonial-section::before{
+    background-image: url('images/testimonial-bg.jpg');
+    --background-overlay: '';
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+}
+
+.testimonial-inner{
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-heading{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial-inner .swiper{
+    margin-top: 60px;
+}
+
+.customer-review{
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.customer-review p{
+    font-size: 15px;
+}
+
+.customer-review .star span{
+    color: #27826f;
+}
+
+.customer-name{
+    text-align: center;
+}
+
+/* testimonial section css end */
+
+
 
 /* footer css start */
 
@@ -821,6 +927,10 @@ button{
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.footer-item img{
+    width: 100px;
 }
 
 .footer-item li{
@@ -1164,7 +1274,7 @@ button{
         padding: 30px;
     }
 
-    p, input::placeholder, label{
+    p, input::placeholder, label, .vision-div p, .right-about p{
         font-size: 14px;
     }
 
@@ -1194,7 +1304,7 @@ button{
     }
 
     .carousel-content {
-        top: 40%;
+        top: 72%;
         width: 90%;
         gap: 15px;
     }
@@ -1203,7 +1313,7 @@ button{
         padding: 5px 15px;
     }
 
-    .product-grid-inner, .about-inner, .contact-form-inner, .footer-inner, .contact-details, .left-contact-form form .form-group, .product-heading-section, .products-inner{
+    .product-grid-inner, .about-inner, .contact-form-inner, .footer-inner, .contact-details, .left-contact-form form .form-group, .product-heading-section, .products-inner, .vm-inner, .right-vision-mission{
         grid-template-columns: repeat(1,1fr);
         gap: 20px;
     }
@@ -1212,7 +1322,7 @@ button{
         background-image: linear-gradient(90deg, #27826f 0%, #27826f 100%);
     }
 
-    .left-contact-form{
+    .left-contact-form, .vm-inner{
         padding: 20px;
     }
 

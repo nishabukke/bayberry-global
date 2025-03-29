@@ -9,7 +9,7 @@
 
 body{
     padding: 0;
-    margin: 0;
+    margin: 0px auto;
     font-family: 'Noto Sans', sans-serif;
     color: #132b2c;
     max-width: 1600px;
@@ -105,6 +105,7 @@ p{
 
 .left-upper-header a{
     font-size: 18px;
+    margin: 0px 5px;
 }
 
 .right-upper-header a{
@@ -603,6 +604,61 @@ p{
     height: 50px;
 }
 
+
+/* portfolio css */
+
+
+.qualification-desc{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .qualification-data{
+    grid-column-gap: 15px;
+      -webkit-column-gap: 15px;
+      column-gap: 15px;
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      padding: 15px 30px;
+  }
+  
+  .qualification-box{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+  }
+
+  .qualification-box h5{
+    color: #27826f;
+  }
+  
+  .round-shape{
+    background-color: #f8b86a;
+    border-radius: 50%;
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+  }
+  
+  .line{
+    background-color: #757575;
+    display: block;
+    height: 100%;
+    transform: translate(8px,-7px);
+    width: 1px;
+  }
+  
+  .calender i{
+    font-size: 12px;
+    color: #333333;
+  }
+
+
 /* about section css end */
 
 /* certificate section css start */
@@ -613,7 +669,7 @@ p{
 
 .swiper-slide img{
     width: 100%;
-    height: 100px;
+    height: 135px;
 }
 
 .certificate-section .swiper-pagination-bullet{
@@ -638,6 +694,41 @@ p{
     display: grid;
     grid-template-columns: 3.5fr 8.5fr;
     gap: 50px;
+}
+
+.is-advantages-section{
+    background-color: #8bfde46c;
+}
+
+.adv-heading{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.adv-inner{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.adv-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+    border-right: 1px dashed #026c55e3;
+}
+
+.adv-item:last-child{
+    border: 0;
+}
+
+.adv-item img{
+    width: 50px;
 }
 
 .TabButton {
@@ -810,6 +901,11 @@ display: block;
     flex-direction: column;
     gap: 20px;
 }
+
+.footer-item img{
+    width: 100px;
+}
+
 
 .footer-item li{
     padding: 5px 0px;
@@ -1003,6 +1099,12 @@ display: block;
     font-size: 24px;
 }
 
+.right-contact-content .form-heading{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .right-contact-content{
     border-radius: 8px;
     background-color: #fff;
@@ -1098,6 +1200,42 @@ display: block;
     text-decoration: underline;
     color: inherit;
 }
+
+.career-form-section form{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 15px;
+}
+
+.career-form-section .form-group{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+
+.career-form-section form .input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.career-form-section .input-group input, .career-form-section .input-group textarea{
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #F6F6F6;
+    font-size: 13px;
+}
+
+.career-form-section form input::placeholder, .career-form-section form textarea::placeholder{
+    font-size: 14px;
+}
+
+.career-form-section input{
+    border: unset;
+}
+
 
 /* career section css end */
 
@@ -1328,7 +1466,7 @@ display: block;
         padding: 5px 15px;
     }
 
-    .product-grid-inner, .about-inner, .contact-form-inner, .footer-inner, .contact-details, .left-contact-form form .form-group, .product-heading-section, .products-inner, .services-heading, .vm-inner, .right-vision-mission, .banner-section-inner, .product-category-section, .cicely-life-inner, .bayberry-vet-section, .business-partner-section, .support-inner, .location-div, .right-contact-content form .form-group{
+    .product-grid-inner, .about-inner, .contact-form-inner, .footer-inner, .contact-details, .left-contact-form form .form-group, .product-heading-section, .products-inner, .services-heading, .vm-inner, .right-vision-mission, .banner-section-inner, .product-category-section, .cicely-life-inner, .bayberry-vet-section, .business-partner-section, .support-inner, .location-div, .right-contact-content form .form-group, .career-form-section .form-group{
         grid-template-columns: repeat(1,1fr);
         gap: 20px;
     }
@@ -1389,4 +1527,18 @@ display: block;
         height: 300px;
         padding: 115px 0px;
     }
+
+    
+  .qualification-desc{
+    grid-template-columns: none;
+  }
+
+  .qualification-data {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px 0px;
+  }
+
+  .qualification-data div:nth-child(2) {
+    display: none;
+  }
 }
