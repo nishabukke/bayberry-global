@@ -44,7 +44,7 @@ li{
     margin: 0;
     font-weight: 600;
     text-transform: capitalize;
-    font-size: 44px;
+    font-size: 40px;
 }
 
 p{
@@ -164,10 +164,40 @@ p{
     color: #27826f;
 }
 
-.tj-menu-area .has-dropdown:hover .sub-menu {
+/* Target only the direct sub-menu of the hovered list item */
+.tj-menu-area li.has-dropdown:hover > .sub-menu {
     opacity: 1;
     visibility: visible;
     top: 150%;
+}
+
+/* For nested sub-menus (like inside Marketing Division) */
+.tj-menu-area li .sub-menu li.has-dropdown {
+    position: relative;
+}
+
+.tj-menu-area li .sub-menu li.has-dropdown > .sub-menu {
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: 0.4s;
+}
+
+/* Show nested sub-menu only when the parent li is hovered */
+.tj-menu-area li .sub-menu li.has-dropdown:hover > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tj-menu-area li .sub-menu li.has-dropdown > a::after {
+    content: ">";
+    position: absolute;
+    right: 20px;
+    top: 25%;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
 }
 
 .tj-menu-area li .sub-menu li a.active, .tj-menu-area li .sub-menu li a:hover {
@@ -1316,6 +1346,11 @@ button{
     .product-grid-inner, .about-inner, .contact-form-inner, .footer-inner, .contact-details, .left-contact-form form .form-group, .product-heading-section, .products-inner, .vm-inner, .right-vision-mission{
         grid-template-columns: repeat(1,1fr);
         gap: 20px;
+    }
+
+    .social-icons span {
+        margin: 5px;
+        padding: 10px;
     }
 
     .contact-form-section::before {

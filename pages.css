@@ -44,7 +44,7 @@ li{
     margin: 0;
     font-weight: 600;
     text-transform: capitalize;
-    font-size: 44px;
+    font-size: 40px;
 }
 
 p{
@@ -63,6 +63,7 @@ p{
     background-color: #27826f;
     display: flex;
     width: max-content;
+    border: unset;
 }
 
 .common-btn:hover{
@@ -164,10 +165,40 @@ p{
     color: #27826f;
 }
 
-.tj-menu-area .has-dropdown:hover .sub-menu {
+/* Target only the direct sub-menu of the hovered list item */
+.tj-menu-area li.has-dropdown:hover > .sub-menu {
     opacity: 1;
     visibility: visible;
     top: 150%;
+}
+
+/* For nested sub-menus (like inside Marketing Division) */
+.tj-menu-area li .sub-menu li.has-dropdown {
+    position: relative;
+}
+
+.tj-menu-area li .sub-menu li.has-dropdown > .sub-menu {
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: 0.4s;
+}
+
+/* Show nested sub-menu only when the parent li is hovered */
+.tj-menu-area li .sub-menu li.has-dropdown:hover > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tj-menu-area li .sub-menu li.has-dropdown > a::after {
+    content: ">";
+    position: absolute;
+    right: 20px;
+    top: 25%;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
 }
 
 .tj-menu-area li .sub-menu li a.active, .tj-menu-area li .sub-menu li a:hover {
@@ -604,6 +635,37 @@ p{
     height: 50px;
 }
 
+.ceo-msg-section{
+    display: grid;
+    grid-template-columns: 6.5fr 5.5fr;
+    gap: 45px;
+}
+
+.left-ceo-section{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.left-ceo-section p, .left-ceo-section blockquote{
+    padding-left: 50px;
+}
+
+
+.left-ceo-section .left{
+    width: 45px;
+    position: absolute;
+    top: 10%;
+    left: 0;
+}
+
+.left-ceo-section .right{
+    width: 45px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 
 /* portfolio css */
 
@@ -693,11 +755,24 @@ p{
 .product-category-section{
     display: grid;
     grid-template-columns: 3.5fr 8.5fr;
-    gap: 50px;
+    gap: 20px;
 }
 
-.is-advantages-section{
-    background-color: #8bfde46c;
+.range-inner{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.range-item{
+    background-color: #3bbb9fd2;
+    border-radius: 50px;
+    padding: 10px 25px;
+    color: #132b2c;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
 }
 
 .adv-heading{
@@ -708,9 +783,9 @@ p{
 
 .adv-inner{
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 25px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .adv-item{
@@ -718,9 +793,14 @@ p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 16px;
-    padding: 20px;
-    border-right: 1px dashed #026c55e3;
+    gap: 15px;
+    background-color: #adffed6c;
+    border-radius: 20px;
+    padding: 20px 70px;
+}
+
+.adv-item:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .adv-item:last-child{
@@ -729,6 +809,12 @@ p{
 
 .adv-item img{
     width: 50px;
+}
+
+.is-map-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
 }
 
 .TabButton {
@@ -811,8 +897,57 @@ display: block;
 
 .bayberry-vet-item img{
     width: 150px;
-    height: 250px;
+    height: 220px;
 }
+
+.genus-myrica-section, .product-category-inner{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.genus-myrica-item, .product-category-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 15px;
+    border: 1px solid #27826f;
+    border-radius: 8px;
+}
+
+.genus-myrica-item table, .product-category-item table{
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.genus-myrica-item img, .product-category-item img{
+    width: 150px;
+    height: 220px;
+}
+
+.enquiry-btn{
+    background-color: #27826f;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+.enquiry-btn:hover{
+    background-color: #132b2c;
+    color: #fff;
+}
+
+.genus-modal.modal-dialog {
+    max-width: 600px !important; /* Adjust width as needed */
+  }
+.genus-modal  .modal-content {
+    max-height: 90vh !important; /* Ensure modal fits in viewport */
+  }
+.genus-modal  .modal-body {
+    overflow-y: auto !important; /* Enable scroll inside modal if needed */
+  }
 
 /* product category section css end */
 
@@ -1466,9 +1601,19 @@ display: block;
         padding: 5px 15px;
     }
 
-    .product-grid-inner, .about-inner, .contact-form-inner, .footer-inner, .contact-details, .left-contact-form form .form-group, .product-heading-section, .products-inner, .services-heading, .vm-inner, .right-vision-mission, .banner-section-inner, .product-category-section, .cicely-life-inner, .bayberry-vet-section, .business-partner-section, .support-inner, .location-div, .right-contact-content form .form-group, .career-form-section .form-group{
+    .product-grid-inner, .about-inner, .contact-form-inner, .footer-inner, .contact-details, .left-contact-form form .form-group, .product-heading-section, .products-inner, .services-heading, .vm-inner, .right-vision-mission, .banner-section-inner, .product-category-section, .cicely-life-inner, .bayberry-vet-section, .business-partner-section, .support-inner, .location-div, .right-contact-content form .form-group, .career-form-section .form-group, .product-category-inner, .genus-myrica-section{
         grid-template-columns: repeat(1,1fr);
         gap: 20px;
+    }
+
+    .genus-myrica-item table{
+        margin-bottom: 0;
+        font-size: 8px;
+    }
+
+    .social-icons span {
+        margin: 5px;
+        padding: 10px;
     }
 
     .contact-form-section::before {
