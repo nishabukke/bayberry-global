@@ -814,7 +814,10 @@ p{
 .is-map-section{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 50px;
+}
+
+.right-is-map img{
+    height: 300px;
 }
 
 .TabButton {
@@ -916,6 +919,34 @@ display: block;
     border: 1px solid #27826f;
     border-radius: 8px;
 }
+
+.right-product-category  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  th, td {
+    border: 1px solid #444;
+    padding: 10px 15px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  thead {
+    background-color: #f4f4f4;
+  }
+
+  th {
+    font-weight: bold;
+    background-color: #eaeaea;
+  }
+
+  tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+
 
 .genus-myrica-item table, .product-category-item table{
     margin-bottom: 0;
