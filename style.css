@@ -1314,7 +1314,15 @@ button{
     }
 
     .common-heading{
-        font-size: 24px;
+        font-size: 20px;
+    }
+
+    .small-heading{
+        font-size: 14px;
+    }
+
+    p{
+        font-size: 14px;
     }
 
     .carousel-content p{

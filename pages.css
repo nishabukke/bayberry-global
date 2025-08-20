@@ -932,6 +932,10 @@ display: block;
     font-size: 14px;
   }
 
+  .table-responsive{
+    overflow-x: auto;
+  }
+
   th, td {
     border: 1px solid #444;
     padding: 10px 15px;
@@ -1649,7 +1653,7 @@ display: block;
         padding: 5px 15px;
     }
 
-    .product-grid-inner, .about-inner, .contact-form-inner, .footer-inner, .contact-details, .left-contact-form form .form-group, .product-heading-section, .products-inner, .services-heading, .vm-inner, .right-vision-mission, .banner-section-inner, .product-category-section, .cicely-life-inner, .bayberry-vet-section, .business-partner-section, .support-inner, .location-div, .right-contact-content form .form-group, .career-form-section .form-group, .product-category-inner, .genus-myrica-section,.ceo-msg-section {
+    .product-grid-inner, .about-inner, .contact-form-inner, .footer-inner, .contact-details, .left-contact-form form .form-group, .product-heading-section, .products-inner, .services-heading, .vm-inner, .right-vision-mission, .banner-section-inner, .product-category-section, .cicely-life-inner, .bayberry-vet-section, .business-partner-section, .support-inner, .location-div, .right-contact-content form .form-group, .career-form-section .form-group, .product-category-inner, .genus-myrica-section,.ceo-msg-section, .is-map-section , .range-inner, .adv-inner {
         grid-template-columns: repeat(1,1fr);
         gap: 20px;
     }
