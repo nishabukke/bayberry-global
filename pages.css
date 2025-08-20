@@ -667,6 +667,11 @@ p{
     right: 0;
 }
 
+.right-ceo-section img{
+    width: 100%;
+    padding-left: 40px;
+}
+
 /* portfolio css */
 
 
@@ -1590,7 +1595,7 @@ display: block;
     }
 
     .section_lg{
-        padding: 30px;
+        padding: 30px 20px;
     }
 
     p, input::placeholder, label{
@@ -1602,8 +1607,20 @@ display: block;
         font-size: 26px;
     }
 
+    .small-heading{
+        font-size: 14px;
+    }
+
     .common-heading{
-        font-size: 24px;
+        font-size: 20px;
+    }
+
+    .right-about{
+        gap: 10px;
+    }
+
+    .right-about p{
+        font-size: 14px;
     }
 
     .carousel-content p{
@@ -1632,9 +1649,22 @@ display: block;
         padding: 5px 15px;
     }
 
-    .product-grid-inner, .about-inner, .contact-form-inner, .footer-inner, .contact-details, .left-contact-form form .form-group, .product-heading-section, .products-inner, .services-heading, .vm-inner, .right-vision-mission, .banner-section-inner, .product-category-section, .cicely-life-inner, .bayberry-vet-section, .business-partner-section, .support-inner, .location-div, .right-contact-content form .form-group, .career-form-section .form-group, .product-category-inner, .genus-myrica-section{
+    .product-grid-inner, .about-inner, .contact-form-inner, .footer-inner, .contact-details, .left-contact-form form .form-group, .product-heading-section, .products-inner, .services-heading, .vm-inner, .right-vision-mission, .banner-section-inner, .product-category-section, .cicely-life-inner, .bayberry-vet-section, .business-partner-section, .support-inner, .location-div, .right-contact-content form .form-group, .career-form-section .form-group, .product-category-inner, .genus-myrica-section,.ceo-msg-section {
         grid-template-columns: repeat(1,1fr);
         gap: 20px;
+    }
+
+    .left-ceo-section p, .left-ceo-section blockquote, 
+.right-ceo-section img {
+    padding-left: 0px;
+    }
+
+    .left-ceo-section .left{
+        top: 5%;
+    }
+
+    .left-ceo-section .right {
+    bottom: -2%;
     }
 
     .genus-myrica-item table{
