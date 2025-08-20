@@ -1658,6 +1658,14 @@ display: block;
         gap: 20px;
     }
 
+    .right-product-category{
+        overflow-x: auto;
+    }
+
+    .TabButton{
+        font-size: 14px;
+    }
+
     .left-ceo-section p, .left-ceo-section blockquote, 
 .right-ceo-section img {
     padding-left: 0px;
